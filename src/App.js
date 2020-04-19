@@ -1,11 +1,16 @@
 import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
- 
-    </div>
-  );
-}
+import Paper from './components/Paper';
+import Header from './components/Header';
+import TodoForm from './components/TodoForm';
+import Todos from './components/Todos';
 
-export default App;
+export default function App() {
+  return (
+    <Paper>
+      <Header />
+        <TodoForm />
+          <Todos />   
+    </Paper>
+  );
+};

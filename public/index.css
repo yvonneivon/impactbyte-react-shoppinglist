@@ -4,10 +4,15 @@
 
 :root {
     --main-red-color: #E06262;
+    --main-black-color: #484848;
 }
 
 .main-red-color {
     color: var(--main-red-color);
+}
+
+.main-black-color {
+    color: var(--main-black-color);
 }
 
 html {
@@ -32,17 +37,18 @@ html {
 
 .container {
     width: 600px;
-    height: 600px;
+    height: 100%;
     background-color: #F2EECB;
     border-radius: 4px;
     padding: 32px;
 }
 
 .frame {
-    border: 3px solid #484848;
+    border: 3px solid var(--main-black-color);
     height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .header {
@@ -53,6 +59,7 @@ html {
 .header-title {
     flex: 1;
     text-align: center;
+    color: var(--main-black-color);
 }
 
 .header-btn {
@@ -63,6 +70,14 @@ html {
     outline: unset;
     border: unset;
     cursor: pointer;
+}
+
+.header-btn.main-red-color:active {
+    text-shadow: 1px 1px 2px var(--main-red-color);
+}
+
+.header-btn.main-black-color:active {
+    text-shadow: 1px 1px 2px var(--main-black-color);
 }
 
 .header-title {
@@ -97,10 +112,37 @@ html {
     font-size: 1.8rem;
     font-family: 'Poppins', sans-serif;
     padding: 8px;
-    
     cursor: pointer;
     outline: unset;
     border: unset;
     background: unset;
+}
 
+.add-btn.main-black-color:active {
+    text-shadow: 1px 1px 2px var(--main-black-color);
+}
+
+.todos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.todo {
+    position: relative;
+    flex: 1 0 auto;
+    text-align: center;
+    min-height: 34px;
+    margin: 16px 0 0;
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px; 
+    display: flex;
+    flex-direction: column;   
+}
+
+.todo-text {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
