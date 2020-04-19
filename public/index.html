@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- CSS-->
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- GOOGLE FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito|Poppins&display=swap" rel="stylesheet">
+
+    <title>Shopping List</title>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="frame">
+        <section class="header">
+          <button class="header-btn">Add</button>
+          <h1 class="header-title">Shopping List</h1>
+          <button class="header-btn main-red-color">Delete</button>
+        </section>
+
+        <section class="add">
+          <form class="add-form">
+            <input type="text" placeholder="Item Name" class="add-input" />
+            <input type="text" placeholder="Item Description" class="add-input" />
+            <input type="url" placeholder="Item URL" class="add-input" />
+            <button class="add-btn">Add</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <script src="/src/App.js"></script>
+    <div id="root"></div>
+  </body>
+</html>
