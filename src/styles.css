@@ -25,7 +25,7 @@ body {
     align-content: center;
     align-items: center;
     background-color: #2D2D2D;
-    height: 100vh;
+    height: 100%;
 }
 
 body,
@@ -36,7 +36,7 @@ html {
 }
 
 .container {
-    width: 600px;
+    width: 500px;
     height: 100%;
     background-color: #F2EECB;
     border-radius: 4px;
@@ -125,15 +125,15 @@ html {
 .todos {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    
+    align-items: center;  
+    min-height: 500px;  
 }
 
 .todo {
     position: relative;
     flex: 1 0 auto;
     text-align: center;
-    min-height: 34px;
+    max-height: 6px;
     margin: 16px 0 0;
     font-family: 'Nunito', sans-serif;
     font-size: 14px; 
@@ -145,4 +145,5 @@ html {
     position: absolute;
     left: 50%;
     transform: translate(-50%);
+    height: 50px;
 }

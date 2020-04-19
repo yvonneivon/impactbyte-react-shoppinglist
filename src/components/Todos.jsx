@@ -1,27 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Todos = ()=> {
+import Todo from './Todo';
+
+const Todos = ({ todos })=> {
     return (
         <section className="todos">
-              <form className="todo">
-                <input type="text" placeholder="Item Name" className="add-input" />
-                <input type="text" placeholder="Item Description" className="add-input" />
-                <input type="url" placeholder="Item URL" className="add-input" />
-              </form>
-    
-              <form className="todo">
-                <input type="text" placeholder="Item Name" className="add-input" />
-                <input type="text" placeholder="Item Description" className="add-input" />
-                <input type="url" placeholder="Item URL" className="add-input" />
-              </form>
-    
-              <form className="todo">
-                <input type="text" placeholder="Item Name" className="add-input" />
-                <input type="text" placeholder="Item Description" className="add-input" />
-                <input type="url" placeholder="Item URL" className="add-input" />
-              </form>     
-            </section>
+          {todos.map((todo, index) => {
+            return <Todo key={index} text ={todo.text} />
+          })}
+        </section>
     );
 };
 
+Todos.propTypes = {
+  todos: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string
+    })
+  )
+}
 export default Todos;
